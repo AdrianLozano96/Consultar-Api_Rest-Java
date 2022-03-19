@@ -1,0 +1,18 @@
+# Indicamos la versión
+version: '3.7'
+
+# Mis servicios
+# Iniciamos los servicios
+services:
+  # MONGO DB cambiar el nombre, desconectar el servicio docker y ejecutar docker compose
+  javaMongodb-server:
+    image: mongo
+    container_name: MiJava-MongoServer
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: adrian
+      MONGO_INITDB_ROOT_PASSWORD: adrian
+      MONGO_INITDB_DATABASE: javaMongo
